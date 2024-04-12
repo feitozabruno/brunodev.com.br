@@ -4,18 +4,20 @@ import { NavMenu } from '@/components/ui/nav-menu'
 
 import Image from 'next/image'
 import * as Icon from 'lucide-react'
-import Link from 'next/link'
+import { IconButton } from '@/components/ui/icon-button'
+import { LinkButton } from '@/components/ui/link-button'
+import { InfoBadge } from '@/components/ui/info-badge'
 
 export default function Home() {
   return (
     <>
-      <header>
+      <header className="relative mx-auto w-full md:max-w-screen-lg">
         <DropdownMenu />
         <NavMenu />
       </header>
 
       <main
-        className={`${poppins.className} mx-auto w-full max-w-screen-lg p-4 antialiased`}
+        className={`${poppins.className} mx-auto mt-14 w-full p-4 antialiased md:max-w-screen-lg`}
       >
         <section className="flex gap-5 md:flex-row">
           <div>
@@ -38,22 +40,14 @@ export default function Home() {
             </h3>
 
             <ul className="mt-2 flex gap-3 md:gap-4">
-              <li className="rounded-lg border border-gray-300 p-2">
-                <Link href="/">
-                  <Icon.Github className="h-4 w-4 transition-all hover:scale-110 hover:transition-all md:h-5 md:w-5" />
-                </Link>
+              <li>
+                <IconButton Icon={Icon.Github} link="/" />
               </li>
-
-              <li className="rounded-lg border border-gray-300 p-2">
-                <Link href="/">
-                  <Icon.Linkedin className="h-4 w-4 transition-all hover:scale-110 hover:transition-all md:h-5 md:w-5" />
-                </Link>
+              <li>
+                <IconButton Icon={Icon.Linkedin} link="/" />
               </li>
-
-              <li className="rounded-lg border border-gray-300 p-2">
-                <Link href="/">
-                  <Icon.Mail className="h-4 w-4 transition-all hover:scale-110 hover:transition-all md:h-5 md:w-5" />
-                </Link>
+              <li>
+                <IconButton Icon={Icon.Mail} link="/" />
               </li>
             </ul>
           </div>
@@ -68,20 +62,9 @@ export default function Home() {
           </p>
 
           <div className="mt-4 flex flex-wrap gap-4">
-            <div className="flex items-center gap-1 rounded-lg border border-gray-300 px-4 py-2 text-emerald-700">
-              <Icon.Rocket className="h-5 w-5" />
-              13 projects
-            </div>
-
-            <div className="flex items-center gap-1 rounded-lg border border-gray-300 px-4 py-2 text-emerald-700">
-              <Icon.GitCommit className="h-5 w-5" />
-              700 commits
-            </div>
-
-            <div className="flex items-center gap-1 rounded-lg border border-gray-300 px-4 py-2 text-emerald-700">
-              <Icon.PencilLine className="h-5 w-5" />
-              2000 lines
-            </div>
+            <InfoBadge Icon={Icon.Rocket}>13 projects</InfoBadge>
+            <InfoBadge Icon={Icon.GitCommit}>700 commits</InfoBadge>
+            <InfoBadge Icon={Icon.PencilLine}>2000 lines</InfoBadge>
           </div>
         </div>
 
@@ -91,19 +74,9 @@ export default function Home() {
           <header>
             <h2 className="text-2xl font-bold">My recent work</h2>
             <p className="mt-2">
-              I recently worked on{' '}
-              <Link href="/" className="font-bold text-emerald-700 underline">
-                engreux102
-              </Link>
-              ,{' '}
-              <Link href="/" className="font-bold text-emerald-700 underline">
-                my personal portfolio
-              </Link>{' '}
-              and{' '}
-              <Link href="/" className="font-bold text-emerald-700 underline">
-                playmobilize
-              </Link>
-              .
+              I recently worked on <LinkButton url="/">engreux102</LinkButton>,{' '}
+              <LinkButton url="/">my personal portfolio</LinkButton> and{' '}
+              <LinkButton url="/">playmobilize</LinkButton>.
             </p>
           </header>
 
@@ -114,9 +87,7 @@ export default function Home() {
                 A converting website about Link vacation home and booking
                 options.
               </p>
-              <Link href="" className="font-bold text-emerald-700 underline">
-                View project
-              </Link>
+              <LinkButton url="/">View project</LinkButton>
             </li>
 
             <li className="flex flex-col gap-2 rounded-xl border border-gray-300 p-4 px-6">
@@ -125,9 +96,7 @@ export default function Home() {
                 A converting website about Link vacation home and booking
                 options.
               </p>
-              <Link href="" className="font-bold text-emerald-700 underline">
-                View project
-              </Link>
+              <LinkButton url="/">View project</LinkButton>
             </li>
 
             <li className="flex flex-col gap-2 rounded-xl border border-gray-300 p-4 px-6">
@@ -136,15 +105,13 @@ export default function Home() {
                 A converting website about Link vacation home and booking
                 options.
               </p>
-              <Link href="" className="font-bold text-emerald-700 underline">
-                View project
-              </Link>
+              <LinkButton url="/">View project</LinkButton>
             </li>
           </ul>
         </div>
 
         <footer className="pb-6 pt-12 text-center text-sm text-gray-400">
-          <p>© 2024 brunofeitoza.dev</p>
+          <p>© 2024 brunodev.com.br</p>
         </footer>
       </main>
     </>
