@@ -5,7 +5,7 @@ export default function Document() {
   return (
     <Html lang="pt-br">
       <Head />
-      <body className={`${poppins.className} antialiased`}>
+      <body className={`${poppins.className} bg-gray-100 antialiased`}>
         <Main />
         <NextScript />
       </body>

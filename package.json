@@ -12,6 +12,7 @@
     "commit": "npm run prettier:fix && npm run lint && npx cz"
   },
   "dependencies": {
+    "lucide-react": "^0.367.0",
     "next": "14.1.4",
     "react": "^18",
     "react-dom": "^18"
