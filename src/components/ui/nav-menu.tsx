@@ -3,7 +3,7 @@ import Link from 'next/link'
 export function NavMenu() {
   return (
     <nav className="hidden md:block">
-      <ul className="flex justify-end gap-8 font-medium text-gray-700">
+      <ul className="flex justify-end gap-8 p-4 font-medium text-gray-700">
         <li>
           <Link
             href="/"

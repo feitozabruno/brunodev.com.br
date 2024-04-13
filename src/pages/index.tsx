@@ -54,11 +54,13 @@ export default function Home() {
         </section>
 
         <div className="mt-8 text-sm">
-          <p className="text-justify leading-loose md:text-left md:text-base">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Consequatur inventore, ullam suscipit odit ea, recusandae corrupti
-            eligendi, voluptatem culpa quisquam incidunt. Ullam enim sequi
-            consequatur voluptate, laboriosam nesciunt ad numquam.
+          <p className="text-justify leading-loose md:text-base">
+            👨🏾‍💻Especialista em criar experiências online que combinam
+            criatividade, usabilidade e desempenho, estou comprometido em
+            entregar resultados📊. Minha paixão pela tecnologia❤️ e busca
+            constante por aprendizado📕 me permitem oferecer soluções digitais
+            de ponta que se destacam para ajudá-lo a alcançar seus objetivos
+            digitais e impulsionar o sucesso do seu negócio online📈.
           </p>
 
           <div className="mt-4 flex flex-wrap gap-4">
