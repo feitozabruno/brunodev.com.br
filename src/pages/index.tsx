@@ -1,12 +1,13 @@
 import { poppins } from '@/styles/fonts'
-import { DropdownMenu } from '@/components/ui/dropdown-menu'
-import { NavMenu } from '@/components/ui/nav-menu'
-
 import Image from 'next/image'
 import * as Icon from 'lucide-react'
+
+import { DropdownMenu } from '@/components/ui/dropdown-menu'
+import { NavMenu } from '@/components/ui/nav-menu'
 import { IconButton } from '@/components/ui/icon-button'
 import { LinkButton } from '@/components/ui/link-button'
 import { InfoBadge } from '@/components/ui/info-badge'
+import { ProjectItem } from '@/components/ui/project-item'
 
 export default function Home() {
   return (
@@ -41,13 +42,15 @@ export default function Home() {
 
             <ul className="mt-2 flex gap-3 md:gap-4">
               <li>
-                <IconButton Icon={Icon.Github} link="/" />
+                <IconButton link="/" icon={Icon.Github} />
               </li>
+
               <li>
-                <IconButton Icon={Icon.Linkedin} link="/" />
+                <IconButton link="/" icon={Icon.Linkedin} />
               </li>
+
               <li>
-                <IconButton Icon={Icon.Mail} link="/" />
+                <IconButton link="/" icon={Icon.Mail} />
               </li>
             </ul>
           </div>
@@ -56,63 +59,57 @@ export default function Home() {
         <div className="mt-8 text-sm">
           <p className="text-justify leading-loose md:text-base">
             👨🏾‍💻Especialista em criar experiências online que combinam
-            criatividade, usabilidade e desempenho, estou comprometido em
-            entregar resultados📊. Minha paixão pela tecnologia❤️ e busca
-            constante por aprendizado📕 me permitem oferecer soluções digitais
-            de ponta que se destacam para ajudá-lo a alcançar seus objetivos
-            digitais e impulsionar o sucesso do seu negócio online📈.
+            criatividade, usabilidade e desempenho. Minha paixão pela tecnologia
+            e busca constante por aprendizado, me capacitam a fornecer soluções
+            digitais de alta qualidade. Estou comprometido em entregar
+            excelentes resultados para ajudá-lo(a) a alcançar seus objetivos e
+            impulsionar o sucesso do seu negócio online📈.
           </p>
 
           <div className="mt-4 flex flex-wrap gap-4">
-            <InfoBadge Icon={Icon.Rocket}>13 projects</InfoBadge>
-            <InfoBadge Icon={Icon.GitCommit}>700 commits</InfoBadge>
-            <InfoBadge Icon={Icon.PencilLine}>2000 lines</InfoBadge>
+            <InfoBadge Icon={Icon.Rocket} title="13 projetos" />
+            <InfoBadge Icon={Icon.GitCommit} title="700 contribuições" />
+            <InfoBadge Icon={Icon.PencilLine} title="2000 linhas" />
           </div>
         </div>
 
-        <hr className="my-10 rounded border border-gray-200" />
+        <hr className="my-5 rounded border border-gray-200 md:my-10" />
 
         <div>
           <header>
-            <h2 className="text-2xl font-bold">My recent work</h2>
-            <p className="mt-2">
-              I recently worked on <LinkButton url="/">engreux102</LinkButton>,{' '}
-              <LinkButton url="/">my personal portfolio</LinkButton> and{' '}
-              <LinkButton url="/">playmobilize</LinkButton>.
+            <h2 className="text-xl font-bold md:text-2xl">
+              Meus trabalhos recentes
+            </h2>
+            <p className="mt-2 text-sm md:text-base">
+              Recentemente trabalhei nos projetos:{' '}
+              <LinkButton url="/" title="Meu site pessoal" />,{' '}
+              <LinkButton url="/" title="TabNews" /> e{' '}
+              <LinkButton url="/" title="HubCamp" />.
             </p>
           </header>
 
           <ul className="mt-6 flex flex-col gap-4">
-            <li className="flex flex-col gap-2 rounded-xl border border-gray-300 p-4 px-6">
-              <h3 className="text-lg font-medium">Project | Engreux102</h3>
-              <p>
-                A converting website about Link vacation home and booking
-                options.
-              </p>
-              <LinkButton url="/">View project</LinkButton>
-            </li>
+            <ProjectItem
+              title="brunodev.com.br"
+              description="Meu site pessoal construído com Next.js e Tailwindcss"
+              url="/"
+            />
 
-            <li className="flex flex-col gap-2 rounded-xl border border-gray-300 p-4 px-6">
-              <h3 className="text-lg font-medium">Project | Engreux102</h3>
-              <p>
-                A converting website about Link vacation home and booking
-                options.
-              </p>
-              <LinkButton url="/">View project</LinkButton>
-            </li>
+            <ProjectItem
+              title="tabnews.com.br"
+              description="Clone do projeto opensource TabNews feito no curso.dev"
+              url="/"
+            />
 
-            <li className="flex flex-col gap-2 rounded-xl border border-gray-300 p-4 px-6">
-              <h3 className="text-lg font-medium">Project | Engreux102</h3>
-              <p>
-                A converting website about Link vacation home and booking
-                options.
-              </p>
-              <LinkButton url="/">View project</LinkButton>
-            </li>
+            <ProjectItem
+              title="hubcamp.com.br"
+              description="Plataforma para um sistema de gerenciamento de aprendizagem"
+              url="/"
+            />
           </ul>
         </div>
 
-        <footer className="pb-6 pt-12 text-center text-sm text-gray-400">
+        <footer className="pb-6 pt-12 text-center text-xs text-gray-400 md:text-sm">
           <p>© 2024 brunodev.com.br</p>
         </footer>
       </main>

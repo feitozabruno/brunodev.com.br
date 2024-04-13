@@ -1,15 +1,17 @@
 import Link from 'next/link'
-import React from 'react'
 
 interface LinkButtonProps {
   url: string
-  children: React.ReactNode
+  title: string
 }
 
-export function LinkButton({ url, children }: LinkButtonProps) {
+export function LinkButton({ url, title }: LinkButtonProps) {
   return (
-    <Link href={url} className="font-bold text-emerald-700 underline">
-      {children}
+    <Link
+      href={url}
+      className="text-sm font-bold text-emerald-700 underline transition-all hover:brightness-125 md:text-base"
+    >
+      {title}
     </Link>
   )
 }
