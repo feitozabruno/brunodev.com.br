@@ -1,4 +1,4 @@
-import * as Icon from 'lucide-react'
+import { Github, Linkedin, Mail } from 'lucide-react'
 import Link from 'next/link'
 
 interface socialLinksProps {
@@ -11,17 +11,17 @@ const socialLinks: socialLinksProps[] = [
   {
     name: 'github',
     url: '/',
-    icon: <Icon.Github />
+    icon: <Github />
   },
   {
     name: 'linkedin',
     url: '/',
-    icon: <Icon.Linkedin />
+    icon: <Linkedin />
   },
   {
     name: 'email',
     url: '/',
-    icon: <Icon.Mail />
+    icon: <Mail />
   }
 ]
 
@@ -30,10 +30,7 @@ export function SocialLinks() {
     <ul className='mt-2 flex gap-3 md:gap-4'>
       {socialLinks.map((link) => {
         return (
-          <li
-            key={link.name}
-            className='flex'
-          >
+          <li key={link.name} className='flex'>
             <Link
               href={link.url}
               className='inline-block rounded-lg border border-gray-300 p-2'

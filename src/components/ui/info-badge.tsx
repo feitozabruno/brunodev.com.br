@@ -1,5 +1,4 @@
-import React from 'react'
-import * as Icon from 'lucide-react'
+import { Rocket, GitCommit, PencilLine } from 'lucide-react'
 
 interface InfoBadgeProps {
   title: string
@@ -9,15 +8,15 @@ interface InfoBadgeProps {
 const badges: InfoBadgeProps[] = [
   {
     title: '13 projetos',
-    icon: <Icon.Rocket className='h-4 w-4 md:h-5 md:w-5' />
+    icon: <Rocket className='h-4 w-4 md:h-5 md:w-5' />
   },
   {
     title: '700 contribuições',
-    icon: <Icon.GitCommit className='h-4 w-4 md:h-5 md:w-5' />
+    icon: <GitCommit className='h-4 w-4 md:h-5 md:w-5' />
   },
   {
     title: '2000 linhas',
-    icon: <Icon.PencilLine className='h-4 w-4 md:h-5 md:w-5' />
+    icon: <PencilLine className='h-4 w-4 md:h-5 md:w-5' />
   }
 ]
 

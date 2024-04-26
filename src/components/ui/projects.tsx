@@ -33,21 +33,9 @@ export function ProjectList() {
         </h2>
         <p className='mt-2 text-sm md:text-base'>
           Recentemente trabalhei nos projetos:{' '}
-          <LinkInline
-            url='/'
-            title='Meu site pessoal'
-          />
-          ,{' '}
-          <LinkInline
-            url='/'
-            title='TabNews'
-          />{' '}
-          e{' '}
-          <LinkInline
-            url='/'
-            title='HubCamp'
-          />
-          .
+          <LinkInline url='/' title='Meu site pessoal' />,{' '}
+          <LinkInline url='/' title='TabNews' /> e{' '}
+          <LinkInline url='/' title='HubCamp' />.
         </p>
       </header>
 
@@ -63,10 +51,7 @@ export function ProjectList() {
                 {project.title}
               </h3>
               <p className='text-sm md:text-base'>{project.description}</p>
-              <LinkInline
-                url={project.url}
-                title='Ver projeto'
-              />
+              <LinkInline url={project.url} title='Ver projeto' />
             </li>
           )
         })}

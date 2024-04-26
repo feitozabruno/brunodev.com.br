@@ -1,4 +1,4 @@
-import * as Icon from 'lucide-react'
+import { X, Menu } from 'lucide-react'
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 
@@ -35,9 +35,7 @@ export function DropdownMenu() {
   return (
     <nav className='fixed inset-x-0 top-0 bg-gray-100 md:hidden'>
       <div className='relative z-50 flex justify-end bg-gray-100 p-4'>
-        <button onClick={toggleMenu}>
-          {open ? <Icon.X /> : <Icon.Menu />}
-        </button>
+        <button onClick={toggleMenu}>{open ? <X /> : <Menu />}</button>
       </div>
 
       <ul
