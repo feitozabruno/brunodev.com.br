@@ -1,11 +1,10 @@
-import { Html, Head, Main, NextScript } from 'next/document'
-import { poppins } from '@/styles/fonts'
+import { Head, Html, Main, NextScript } from 'next/document'
 
 export default function Document() {
   return (
-    <Html lang="pt-br">
+    <Html lang='pt-br'>
       <Head />
-      <body className={`${poppins.className} bg-gray-100 antialiased`}>
+      <body>
         <Main />
         <NextScript />
       </body>

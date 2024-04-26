@@ -1,15 +1,41 @@
 import React from 'react'
+import * as Icon from 'lucide-react'
 
-interface InfoBadgeProps extends React.ComponentPropsWithoutRef<'svg'> {
-  Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>
+interface InfoBadgeProps {
   title: string
+  icon: React.ReactNode
 }
 
-export function InfoBadge({ Icon, title }: InfoBadgeProps) {
+const badges: InfoBadgeProps[] = [
+  {
+    title: '13 projetos',
+    icon: <Icon.Rocket className='h-4 w-4 md:h-5 md:w-5' />
+  },
+  {
+    title: '700 contribuições',
+    icon: <Icon.GitCommit className='h-4 w-4 md:h-5 md:w-5' />
+  },
+  {
+    title: '2000 linhas',
+    icon: <Icon.PencilLine className='h-4 w-4 md:h-5 md:w-5' />
+  }
+]
+
+export function InfoBadges() {
   return (
-    <div className="flex items-center gap-1 rounded-lg border border-gray-300 px-4 py-2 text-emerald-700">
-      <Icon className="h-4 w-4 md:h-5 md:w-5" />
-      <span className="text-sm md:text-base">{title}</span>
+    <div className='mt-4 flex flex-wrap gap-4'>
+      {badges.map((badge) => {
+        return (
+          <div
+            key={badge.title}
+            className='flex items-center gap-1 rounded-lg border border-gray-300
+              px-4 py-2 text-emerald-700'
+          >
+            {badge.icon}
+            <span className='text-sm md:text-base'>{badge.title}</span>
+          </div>
+        )
+      })}
     </div>
   )
 }
