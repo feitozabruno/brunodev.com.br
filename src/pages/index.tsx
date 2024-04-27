@@ -1,22 +1,17 @@
-import { DropdownMenu } from '@/components/ui/dropdown-menu'
-import { NavMenu } from '@/components/ui/nav-menu'
 import { Intro } from '@/components/ui/intro'
 import { InfoBadges } from '@/components/ui/info-badge'
 import { ProjectList } from '@/components/ui/projects'
 import { Footer } from '@/components/ui/footer'
+import { Divisor } from '@/components/ui/divisor'
+import { NavMenu } from '@/components/ui/nav-menu'
+import { Container } from '@/components/ui/container'
 
 export default function Home() {
   return (
     <>
-      <header className='relative mx-auto w-full md:max-w-screen-lg'>
-        <DropdownMenu />
-        <NavMenu />
-      </header>
+      <NavMenu />
 
-      <div
-        className='mx-auto mt-14 w-full p-4 antialiased md:mt-7
-          md:max-w-screen-lg'
-      >
+      <Container>
         <Intro />
 
         <div className='mt-8 text-sm'>
@@ -32,12 +27,12 @@ export default function Home() {
           <InfoBadges />
         </div>
 
-        <hr className='my-5 rounded border border-gray-200 md:my-10' />
+        <Divisor />
 
         <ProjectList />
 
         <Footer />
-      </div>
+      </Container>
     </>
   )
 }

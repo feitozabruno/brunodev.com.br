@@ -2,7 +2,7 @@ import { X, Menu } from 'lucide-react'
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 
-export function DropdownMenu() {
+export function Mobile() {
   const [open, setOpen] = useState(false)
 
   const menuRef = useRef<HTMLUListElement>(null)

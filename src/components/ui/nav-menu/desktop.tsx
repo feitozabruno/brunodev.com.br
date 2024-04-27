@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export function NavMenu() {
+export function Desktop() {
   return (
     <nav className='hidden md:block'>
       <ul className='flex justify-end gap-8 p-4 font-medium text-gray-700'>
