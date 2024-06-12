@@ -15,13 +15,12 @@ export default function Home() {
         <Intro />
 
         <div className='mt-8 text-sm'>
-          <p className='text-justify leading-loose md:text-base'>
-            👨🏾‍💻Especialista em criar experiências online que combinam
-            criatividade, usabilidade e desempenho. Minha paixão pela tecnologia
-            e busca constante por aprendizado, me capacitam a fornecer soluções
-            digitais de alta qualidade. Estou comprometido em entregar
-            excelentes resultados para ajudá-lo(a) a alcançar seus objetivos e
-            impulsionar o sucesso do seu negócio online📈.
+          <p className='text-left leading-loose md:text-base'>
+            👨🏾‍💻Especialista em projetar, desenvolver e manter aplicações web.
+            Escrevo código limpo, padronizado, testado e bem documentado.
+            Utilizo boas práticas de desempenho e segurança, além de garantir a
+            otimização (SEO) para motores de busca e a compatibilidade com
+            diferentes navegadores.
           </p>
 
           <InfoBadges />
