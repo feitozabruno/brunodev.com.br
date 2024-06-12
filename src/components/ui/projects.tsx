@@ -8,17 +8,17 @@ interface ProjectItemProps {
 
 const projects: ProjectItemProps[] = [
   {
-    title: 'Meu site pessoal | brunodev.com.br',
+    title: 'brunodev.com.br',
     description: 'Meu site pessoal construído com Next.js e Tailwindcss',
     url: '/'
   },
   {
-    title: 'Clone TabNews | tabnews.com.br',
+    title: 'tabnews.com.br',
     description: 'Clone do projeto opensource TabNews feito no curso.dev',
     url: '/'
   },
   {
-    title: 'HubCamp | hubcamp.com.br',
+    title: 'hubcamp.com.br',
     description: 'Plataforma para um sistema de gerenciamento de aprendizagem',
     url: '/'
   }
@@ -44,7 +44,7 @@ export function ProjectList() {
           return (
             <li
               key={project.title}
-              className='flex flex-col gap-2 rounded-xl border border-gray-300
+              className='flex flex-col gap-2 rounded-xl border border-gray-300 bg-white
                 p-4 px-6'
             >
               <h3 className='text-base font-medium md:text-lg'>

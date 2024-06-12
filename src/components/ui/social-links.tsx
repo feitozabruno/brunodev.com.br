@@ -33,7 +33,7 @@ export function SocialLinks() {
           <li key={link.name} className='flex'>
             <Link
               href={link.url}
-              className='inline-block rounded-lg border border-gray-300 p-2'
+              className='inline-block rounded-lg border border-gray-300 bg-white p-2'
             >
               {link.icon}
             </Link>

@@ -27,7 +27,7 @@ export function InfoBadges() {
         return (
           <div
             key={badge.title}
-            className='flex items-center gap-1 rounded-lg border border-gray-300
+            className='flex items-center gap-1 rounded-lg border border-gray-300 bg-white
               px-4 py-2 text-emerald-700'
           >
             {badge.icon}
