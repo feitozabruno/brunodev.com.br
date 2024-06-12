@@ -8,17 +8,17 @@ interface ProjectItemProps {
 
 const projects: ProjectItemProps[] = [
   {
-    title: 'brunodev.com.br',
+    title: 'Meu site pessoal | brunodev.com.br',
     description: 'Meu site pessoal construído com Next.js e Tailwindcss',
     url: '/'
   },
   {
-    title: 'tabnews.com.br',
+    title: 'Clone TabNews | tabnews.com.br',
     description: 'Clone do projeto opensource TabNews feito no curso.dev',
     url: '/'
   },
   {
-    title: 'hubcamp.com.br',
+    title: 'HubCamp | hubcamp.com.br',
     description: 'Plataforma para um sistema de gerenciamento de aprendizagem',
     url: '/'
   }
